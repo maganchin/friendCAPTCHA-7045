@@ -1,0 +1,7 @@
+[build]
+builder = "nixpacks"
+buildCommand = "bun install && bun run build:web"
+
+[deploy]
+startCommand = "cd packages/web && bun src/server.ts"
+restartPolicyType = "on_failure"
